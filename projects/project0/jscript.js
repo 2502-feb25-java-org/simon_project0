@@ -31,3 +31,11 @@ function setphone(item){
 function setemail(item){
     localStorage.email=item.value;
 }
+function check(){
+    if( ((document.querySelector("#uname").value).toLowerCase() == "admin")  && (document.querySelector("#pword").value=="123")){
+        document.querySelector("#access").style.display="block";
+        document.querySelector("#remove").style.display="none";    }
+    else{document.querySelector("#fail").style.display="block";
+
+}
+}

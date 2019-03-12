@@ -26,10 +26,10 @@
         </div>
     </nav>
     <!-- CONTENT  add a button to hide/show game display:none--><br>
+
+    <div class="container-fluid" id="access">
     <h2 style="text-align: center">Handball Game</h2>
-<canvas id="game" height="600" width="900">
-    
-</canvas>
+<canvas id="game" height="600" width="900"></canvas>
 <div class="row">
     <div class="col-1"></div>
     <div class="col-2"><h3 id="score">test</h3></div>
@@ -37,10 +37,45 @@
     <div class="col-3"><h3 id="highscore">test</h3></div>
     <div class="col-1"></div>
     <div class="col-4"><h3 id="time">test</h3></div>
-    
 </div><br>
-<p style="text-align: center">Goal: Keep hitting the white ball with the blue paddle, but be careful, it gets faster over time!</p>
+<p style="text-align: center">Goal: Keep hitting the blue ball with the white paddle, but be careful, it gets faster over time!</p>
+</div>
 
+
+<div class="container-fluid" id="remove">
+    <div class="boxy col-4">
+    <form action="" method="post">
+        <!-- CHANGE TO GET/POST WHEN IMPLEMENTING-->
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="fname">Username:</label>
+                    <input type="text" id="uname" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
+       
+            
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="fname">Password:</label>
+                            <input type="password" id="pword" class="form-control">
+                        </div>
+                        <p style="color:red" id="fail">Failed to log in, please check your credentials</p>
+                    </div>
+                    
+                </div>
+            
+     
+
+       
+        <button type="button" class="btn btn-primary" onclick="check();">Login</button>
+    </form>
+    </div>
+</div>
 
     <br><br>
     <footer>
