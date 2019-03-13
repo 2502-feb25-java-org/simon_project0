@@ -13,6 +13,12 @@ function load(){
         document.querySelector('#email').value=localStorage.email;}
 
 }
+function signup(){
+    if((typeof(localStorage.fname) != 'undefined') && (typeof(localStorage.lname) != 'undefined') && (typeof(localStorage.gn) != 'undefined') && (typeof(localStorage.age) != 'undefined') && (typeof(localStorage.phone) != 'undefined') && (typeof(localStorage.email) != 'undefined') && (document.querySelector("#pword").value != "")){
+    alert("Thank you for signing up!");
+    window.open("game.html", "_self");
+}
+}
 function gload(){
     if(typeof(localStorage.logged) != 'undefined'){
     if(localStorage.logged == 'true'){
