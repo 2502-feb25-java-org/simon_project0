@@ -12,7 +12,18 @@ function load(){
     if(typeof(localStorage.email) != 'undefined'){
         document.querySelector('#email').value=localStorage.email;}
 
-};
+}
+function gload(){
+    if(typeof(localStorage.logged) != 'undefined'){
+    if(localStorage.logged == 'true'){
+
+            console.log("test");
+            document.querySelector("#access").style.display="block";
+            document.querySelector("#remove").style.display="none";
+        
+    }
+}
+}
 function setfname(item){
     localStorage.fname=item.value;
 }
@@ -32,10 +43,12 @@ function setemail(item){
     localStorage.email=item.value;
 }
 function check(){
+    
     if( ((document.querySelector("#uname").value).toLowerCase() == "admin")  && (document.querySelector("#pword").value=="123")){
-        document.querySelector("#access").style.display="block";
-        document.querySelector("#remove").style.display="none";    }
-    else{document.querySelector("#fail").style.display="block";
+        localStorage.logged=true; 
+    gload();}
+    else{document.querySelector("#fail").style.display="block";}
 
-}
+        
+    
 }
