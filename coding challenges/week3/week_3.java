@@ -15,15 +15,15 @@ public class main {
 		}
 		//init helper variables
 		int length;
-		String reverse;
+		String rev;
 		for (String item : total) {
 			//reset "reverse" and "length" to have current string properties
-			reverse = "";
+			rev = "";
 			length=item.length();
 			for (int i = length - 1; i >= 0; i--)
 				//forge reverse string
-		         {reverse = reverse + item.charAt(i);}
-			if (item.equals(reverse)) {
+		         {rev = rev + item.charAt(i);}
+			if (item.equals(rev)) {
 				//add to palindrome array if it equals
 		         pally.add(item);}
 			
